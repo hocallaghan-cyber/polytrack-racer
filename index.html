@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PolyTrack Grand Prix</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hud-shell">
+      <div class="topbar">
+        <div class="brand-wrap">
+          <div class="logo">GT</div>
+          <div>
+            <h1>PolyTrack Grand Prix</h1>
+            <p>10 laps • 9 rivals • pit stops required</p>
+          </div>
+        </div>
+
+        <div class="controls-box">
+          <label for="trackSelect">Track</label>
+          <select id="trackSelect"></select>
+          <button id="startRaceBtn">Start Race</button>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="label">Lap</span>
+          <strong id="lapValue">1 / 10</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Position</span>
+          <strong id="positionValue">1 / 10</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Speed</span>
+          <strong id="speedValue">0 km/h</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Lap Time</span>
+          <strong id="lapTimeValue">00:00.0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Fuel</span>
+          <strong id="fuelValue">100%</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Tyres</span>
+          <strong id="tyreValue">100%</strong>
+        </div>
+      </div>
+
+      <div class="race-layout">
+        <canvas id="gameCanvas" width="1280" height="760"></canvas>
+
+        <aside class="sidebar">
+          <div class="panel">
+            <h2>Race Feed</h2>
+            <p id="statusText">Choose a circuit and start the race.</p>
+          </div>
+
+          <div class="panel">
+            <h2>Leaderboard</h2>
+            <ol id="leaderboard"></ol>
+          </div>
+
+          <div class="panel">
+            <h2>Controls</h2>
+            <ul>
+              <li>W / ↑ accelerate</li>
+              <li>S / ↓ brake</li>
+              <li>A / D steer</li>
+              <li>P pit stop</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
